@@ -119,16 +119,18 @@ iframe {
 
 #main{
  	top: 12vw;
-  	width: 100%;
+  	width: 95%;
   	height: 85vh;
     position: relative;
+    overflow-x: hidden;
+
+	text-align: center;
 }
 
 .colonna_video {
 	color: white;
 	font-family: "SpaceGroteskText";
 	font-size: 4vw;
-	text-align: center;
 	float: center;
 	width: 100%;
 	padding: 15px;
