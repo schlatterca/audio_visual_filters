@@ -1,0 +1,65 @@
+<DOCTYPE! html>
+<html>
+  <head>
+  	<title>Audio_Visual_Filters</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="css/gallery.css">
+    <script src="js/p5.js"></script>
+    <script src="js/p5.sound.js"></script>
+  </head>
+  <body style="background-color: rgba(15, 15, 15);">
+  	<!--HEADER-->
+  	<div id="header">
+		<div class="title">AUDIO_VISUAL_FILTERS</div>
+		<div>
+			<button id="infoButton" onclick="showInfo()">
+				<span>+</span>
+			</button>
+		</div>
+		<div class="underName"><a href="https://schlatterca.github.io/Audio_Visual_Filters/gallery.html">Try the Filters</a></div>
+	</div>
+
+	<!--INFO-->
+	<div id="credits" class="hidden">
+		<div class="colonna">
+			(ITA) Audio_Visual_Filters è un progetto di Jan Angelini, Alessandro Bettini e Carlo Andrea Schlatter, realizzato come elaborato finale per l'esame di Elementi di Informatica tenuto dal prof. Davide Riboli presso l’<a href="http://www.isiaurbino.net/" target="_blank">ISIA di Urbino</a> nell’Anno accademico 2019–20. Il progetto consiste in uno sketch, scritto in linguaggio P5.js grazie al web editor di <a href="https://www.openprocessing.org" target="_blank">OpenProcessing</a>, e al relativo sito internet, scritto con <a href="https://www.sublimetext.com" target="_blank">Sublime Text</a> e caricato come GitHub Pages attraverso una repository. Lo sketch utilizza microfono e webcam del dispositivo in uso per permettere all’utente di vedere modificate le proprie forme, i propri colori e i propri gesti in base ai suoni e ai rumori circostanti: i quattro diversi filtri rimandano a quattro “fantasmi” ispirati dai panorami sonori e visivi della musica dei Nine Inch Nails, ai quali è dedicata la gallery del sito. “Audio_Visual_Filters” comprende infatti una sezione attraverso la quale è possibile esplorare gli effetti dei diversi filtri applicati a video musicali dei NIN, e notare l’influenza delle relative canzoni sugli stessi video. Ispirato dagli album <a href="https://www.nin.com/nine-inch-nails-ghosts-v-vi-available-now/" target="_blank">“Ghosts V: Together” e “Ghosts VI: Locusts”</a> oltre che dalla mentalità <i>open source</i>, il progetto è un invito per l’utente a esplorare le diverse possibilità date dall’approccio creativo agli strumenti audio e video, sia nei confronti dei filmati che lo circondano, sia verso l’immagine catturata dalla propria webcam.
+			<p style="color: grey">(ENG) Audio_Visual_Filters is a project by Jan Angelini, Alessandro Bettini and Carlo Andrea Schlatter, completed as the final project for the Elements of Informatics course held by prof. Davide Riboli at <a href="http://www.isiaurbino.net/" target="_blank">ISIA Urbino</a> in the 2019-20 Academic year. It consists of a sketch, written in P5.js language through the <a href="https://www.openprocessing.org" target="_blank">OpenProcessing</a> web editor, together with a website, written on <a href="https://www.sublimetext.com" target="_blank">Sublime Text</a> and uploaded as a GitHub Pages through a specific repository. The sketch employs microphone and webcam of the device in use to allow users to see their shapes, colors and gestures changed according to the surrounding sounds and noises: the four different filters refer to four "ghosts" inspired by the sound and visual panoramas of the Nine Inch Nails music, to which the site’s gallery is dedicated. In fact, "Audio_Visual_Filters" includes a section through which the user can browse the effects of multiple filters applied to NIN music videos, and explore the influence of their songs on related videos. Inspired by the albums <a href="https://www.nin.com/nine-inch-nails-ghosts-v-vi-available-now/" target="_blank">"Ghosts V: Together" and "Ghosts VI: Locusts"</a>, as well as by the <i>open source</i> mindset, the project is an invitation for the users to explore the different possibilities given by a creative approach to audio and video tools, both towards the videos that surround them, and towards the image captured by their webcam.</p>
+			<p>© 2020 by Jan Angelini, Alessandro Bettini, Carlo Andrea Schlatter. Font: <a href="https://fonts.floriankarsten.com/space-grotesk" target="_blank">Space Grotesk</a> by Florian Karsten.
+		</div>
+	</div>
+
+	<!--SCRIPT-->
+	<div id="main">
+		<div class="colonna_video">ciao<br>ciao</div>
+  	</div>
+  </body>
+
+  <script>
+  	function showInfo() {
+		document.getElementById("infoButton").classList.toggle("rotate");
+		document.getElementById("main").classList.toggle("hidden");
+		document.getElementById("credits").classList.toggle("hidden");
+
+	    if (document.body.style.backgroundColor === "rgb(15, 15, 15)"){
+	    	document.body.style.backgroundColor = "rgb(220, 220, 220)";
+	    	return;
+	    } if (document.body.style.backgroundColor === "rgb(220, 220, 220)") {
+	    	document.body.style.backgroundColor = "rgb(15, 15, 15)";
+	    	return;
+	    }
+	}
+
+	function resizer(id){
+		var doc=document.getElementById(id).contentWindow.document;
+		var body_ = doc.body, html_ = doc.documentElement;
+
+		var height = Math.max( body_.scrollHeight, body_.offsetHeight, html_.clientHeight, html_.scrollHeight, html_.offsetHeight );
+		var width  = Math.max( body_.scrollWidth, body_.offsetWidth, html_.clientWidth, html_.scrollWidth, html_.offsetWidth );
+
+		document.getElementById(id).style.height=height;
+		document.getElementById(id).style.width=width;
+
+	}
+	</script>
+
+</html>
